@@ -85,16 +85,16 @@ clearBtn.addEventListener('click', function() {
 
 //filter through a task
 filter.addEventListener('keyup', function(e) {
-    const filterInput = e.target.value.toLowerCase();
+    const filterInput = e.target.value.toLowerCase();// whatever is being entered to filter innput field converted to lowercase
     //loop through each list group item and check if text content of a single list in group matches value entered in th filter input field
     document.querySelectorAll('.list-group-item').forEach(function(listGroupItem) {
         const oneListGroupItem = listGroupItem.firstChild.textContent;
         if (oneListGroupItem.toLowerCase().indexOf(filterInput) != -1) { //-1 means not a match
-            listGroupItem.style.display = "block";
+            listGroupItem.style.display = "block"; //display if their is a match
 
         } else {
 
-            listGroupItem.style.display = "none";
+            listGroupItem.style.display = "none";// dont display if no match
         }
     });
 });
